@@ -276,23 +276,23 @@ get a main data frame of dimensions:
 
 Features:
 
-*tBodyAcc-XYZ          x 3
-*tGravityAcc-XYZ       x 3
-*tBodyAccJerk-XYZ      x 3
-*tBodyGyro-XYZ         x 3
-*tBodyGyroJerk-XYZ     x 3
-*tBodyAccMag        
-*tGravityAccMag      
-*tBodyAccJerkMag   
-*tBodyGyroMag         
-*tBodyGyroJerkMag      
-*fBodyAcc-XYZ          x 3
-*fBodyAccJerk-XYZ      x 3
-*fBodyGyro-XYZ         x 3
-*fBodyAccMag        
-*fBodyAccJerkMag     
-*fBodyGyroMag       
-*fBodyGyroJerkMag    
+* tBodyAcc-XYZ          x 3  
+* tGravityAcc-XYZ       x 3  
+* tBodyAccJerk-XYZ      x 3  
+* tBodyGyro-XYZ         x 3  
+* tBodyGyroJerk-XYZ     x 3  
+* tBodyAccMag          
+* tGravityAccMag        
+* tBodyAccJerkMag     
+* tBodyGyroMag           
+* tBodyGyroJerkMag        
+* fBodyAcc-XYZ          x 3  
+* fBodyAccJerk-XYZ      x 3  
+* fBodyGyro-XYZ         x 3  
+* fBodyAccMag           
+* fBodyAccJerkMag       
+* fBodyGyroMag         
+* fBodyGyroJerkMag      
 
 For our reduced data set only mean and standard deviation was required.
 From the above table we can see that we have a total of 33 basic features and for each of these there is a   
