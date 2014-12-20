@@ -64,4 +64,4 @@ for(sub in sub_iter){
 names(tidy_df) <- names(reduced_mdf)
 tidy_df <- data.frame(tidy_df)
 
-write.table(tidy_df, file="tidy.txt", sep="\t")
+write.table(tidy_df, file="tidy.txt", sep="\t", row.name = FALSE)
