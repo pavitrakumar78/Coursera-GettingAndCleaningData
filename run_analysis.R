@@ -2,15 +2,17 @@ print("Reading data...")
 
 features <- read.table("features.txt")
 
-subject_train <- read.table("train/subject_train.txt")
+subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt")
 
-X_train <- read.table("train/X_train.txt")
-y_train <- read.table("train/y_train.txt")
+X_train <- read.table("UCI HAR Dataset/train/X_train.txt")
+y_train <- read.table("UCI HAR Dataset/train/y_train.txt")
 
 subject_test <- read.table("test/subject_test.txt")
 
-X_test<- read.table("test/X_test.txt")
-y_test<- read.table("test/y_test.txt")
+X_test<- read.table("UCI HAR Dataset/test/X_test.txt")
+y_test<- read.table("UCI HAR Dataset/test/y_test.txt")
+
+activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")
 
 prinT("Merging data...")
 
@@ -42,7 +44,6 @@ for(r in c("X","Y","Z","")){
 names(reduced_mdf) <- gsub("-",".",names(reduced_mdf),fixed = TRUE)
 names(reduced_mdf) <- gsub("()","",names(reduced_mdf),fixed = TRUE)
 
-activity_labels <- read.table("activity_labels.txt")
 
 reduced_mdf$activity <- activity_labels[reduced_mdf$activity,2]
 
