@@ -1,5 +1,3 @@
-print("Reading data...")
-
 features <- read.table("UCI HAR Dataset/features.txt")
 
 subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt")
@@ -7,14 +5,12 @@ subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt")
 X_train <- read.table("UCI HAR Dataset/train/X_train.txt")
 y_train <- read.table("UCI HAR Dataset/train/y_train.txt")
 
-subject_test <- read.table("test/subject_test.txt")
+subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt")
 
 X_test<- read.table("UCI HAR Dataset/test/X_test.txt")
 y_test<- read.table("UCI HAR Dataset/test/y_test.txt")
 
 activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")
-
-prinT("Merging data...")
 
 train_data <- data.frame(cbind(subject_train,y_train,X_train))
 
@@ -25,8 +21,6 @@ mdf <- data.frame(rbind(train_data,test_data))
 feature_list <- c("subject","activity",as.vector(features$V2))
 
 names(mdf) <- feature_list
-
-print("Cleaning data...")
 
 std_features <- grep("std()",feature_list,value = T,fixed = T)
 mean_features <- grep("mean()",feature_list,value = T,fixed = T)
@@ -45,10 +39,8 @@ names(reduced_mdf) <- gsub("-",".",names(reduced_mdf),fixed = TRUE)
 names(reduced_mdf) <- gsub("()","",names(reduced_mdf),fixed = TRUE)
 
 
-reduced_mdf$activity <- activity_labels[reduced_mdf$activity,2]
 
-print("Data frame 1 done!")
-print("Preparing tidy data...")
+reduced_mdf$activity <- activity_labels[reduced_mdf$activity,2]
 
 sub_iter = 1:30
 
@@ -72,5 +64,4 @@ for(sub in sub_iter){
 names(tidy_df) <- names(reduced_mdf)
 tidy_df <- data.frame(tidy_df)
 
-write.table(tidy_df, file="tidy_data.txt", sep="\t")
-print("tidy data created!")
+write.table(tidy_df, file="tidy.txt", sep="\t")
