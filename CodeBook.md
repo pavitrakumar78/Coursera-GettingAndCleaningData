@@ -253,8 +253,90 @@ write.table(tidy_df, file="tidy.txt", sep="\t")
 ```
 
 
-###Explanation of variables
+###Explanation of variables and data
 
-The dimensions of test data are:
+The dimensions of train data:
+7352  561
 
+The dimensions of test data:
+2947  561
 
+The dimensions of subject data(test):
+2947    1
+
+The dimensions of subject data(train):
+7352    1
+
+The the above specifications, we can infer that after merging the test,train and subject data we  
+get a main data frame of dimensions:
+
+10299 563
+
+(7352 + 2947 and 561 + 1+ 1)
+
+Features:
+
+*tBodyAcc-XYZ          x 3
+*tGravityAcc-XYZ       x 3
+*tBodyAccJerk-XYZ      x 3
+*tBodyGyro-XYZ         x 3
+*tBodyGyroJerk-XYZ     x 3
+*tBodyAccMag        
+*tGravityAccMag      
+*tBodyAccJerkMag   
+*tBodyGyroMag         
+*tBodyGyroJerkMag      
+*fBodyAcc-XYZ          x 3
+*fBodyAccJerk-XYZ      x 3
+*fBodyGyro-XYZ         x 3
+*fBodyAccMag        
+*fBodyAccJerkMag     
+*fBodyGyroMag       
+*fBodyGyroJerkMag    
+
+For our reduced data set only mean and standard deviation was required.
+From the above table we can see that we have a total of 33 basic features and for each of these there is a   
+mean and a standard deviation.
+
+Total = 33 * 2 + 1 + 1 = 68 columns in the reduced data set.
+
+The extra 2 columns are activity label and subject.
+
+List of all the features of the reduced data set after cleaning:
+
+```
+ [1] "subject"                   "activity"                 
+ [3] "tBodyAcc.X.std"            "tBodyAcc.Y.std"           
+ [5] "tBodyAcc.Z.std"            "tGravityAcc.X.std"        
+ [7] "tGravityAcc.Y.std"         "tGravityAcc.Z.std"        
+ [9] "tBodyAccJerk.X.std"        "tBodyAccJerk.Y.std"       
+[11] "tBodyAccJerk.Z.std"        "tBodyGyro.X.std"          
+[13] "tBodyGyro.Y.std"           "tBodyGyro.Z.std"          
+[15] "tBodyGyroJerk.X.std"       "tBodyGyroJerk.Y.std"      
+[17] "tBodyGyroJerk.Z.std"       "tBodyAccMag.std"          
+[19] "tGravityAccMag.std"        "tBodyAccJerkMag.std"      
+[21] "tBodyGyroMag.std"          "tBodyGyroJerkMag.std"     
+[23] "fBodyAcc.X.std"            "fBodyAcc.Y.std"           
+[25] "fBodyAcc.Z.std"            "fBodyAccJerk.X.std"       
+[27] "fBodyAccJerk.Y.std"        "fBodyAccJerk.Z.std"       
+[29] "fBodyGyro.X.std"           "fBodyGyro.Y.std"          
+[31] "fBodyGyro.Z.std"           "fBodyAccMag.std"          
+[33] "fBodyBodyAccJerkMag.std"   "fBodyBodyGyroMag.std"     
+[35] "fBodyBodyGyroJerkMag.std"  "tBodyAcc.X.mean"          
+[37] "tBodyAcc.Y.mean"           "tBodyAcc.Z.mean"          
+[39] "tGravityAcc.X.mean"        "tGravityAcc.Y.mean"       
+[41] "tGravityAcc.Z.mean"        "tBodyAccJerk.X.mean"      
+[43] "tBodyAccJerk.Y.mean"       "tBodyAccJerk.Z.mean"      
+[45] "tBodyGyro.X.mean"          "tBodyGyro.Y.mean"         
+[47] "tBodyGyro.Z.mean"          "tBodyGyroJerk.X.mean"     
+[49] "tBodyGyroJerk.Y.mean"      "tBodyGyroJerk.Z.mean"     
+[51] "tBodyAccMag.mean"          "tGravityAccMag.mean"      
+[53] "tBodyAccJerkMag.mean"      "tBodyGyroMag.mean"        
+[55] "tBodyGyroJerkMag.mean"     "fBodyAcc.X.mean"          
+[57] "fBodyAcc.Y.mean"           "fBodyAcc.Z.mean"          
+[59] "fBodyAccJerk.X.mean"       "fBodyAccJerk.Y.mean"      
+[61] "fBodyAccJerk.Z.mean"       "fBodyGyro.X.mean"         
+[63] "fBodyGyro.Y.mean"          "fBodyGyro.Z.mean"         
+[65] "fBodyAccMag.mean"          "fBodyBodyAccJerkMag.mean" 
+[67] "fBodyBodyGyroMag.mean"     "fBodyBodyGyroJerkMag.mean"
+```
