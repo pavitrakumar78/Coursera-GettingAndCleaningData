@@ -13,8 +13,8 @@ Summary of data processing:
 * An independent tidy data set with the average of each variable for each activity and each subject is created and written into a text file.
 
 
-The code analysis and data explanation can be found in the CookBook.md
+The code analysis and data explanation can be found in the CookBook.md  
 Link: https://github.com/pavitrakumar78/-Coursera-GettingAndCleaningData/blob/master/CodeBook.md
 
-The R code used to clean and process the data can be found in run_analysis.R
+The R code used to clean and process the data can be found in run_analysis.R  
 Link: https://github.com/pavitrakumar78/-Coursera-GettingAndCleaningData/blob/master/run_analysis.R
