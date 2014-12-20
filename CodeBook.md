@@ -270,7 +270,7 @@ The dimensions of subject data(train):
 The the above specifications, we can infer that after merging the test,train and subject data we  
 get a main data frame of dimensions:
 
-10299 563
+10299 Rows	563 Columns
 
 (7352 + 2947 and 561 + 1+ 1)
 
