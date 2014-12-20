@@ -251,3 +251,10 @@ This tidy data frame is written to a `tidy_df.txt` text file.
 ```r
 write.table(tidy_df, file="tidy.txt", sep="\t")
 ```
+
+
+###Explanation of variables
+
+The dimensions of test data are:
+
+
