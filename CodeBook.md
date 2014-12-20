@@ -276,19 +276,19 @@ get a main data frame of dimensions:
 
 Features:
 
-* tBodyAcc-XYZ          x 3  
-* tGravityAcc-XYZ       x 3  
-* tBodyAccJerk-XYZ      x 3  
-* tBodyGyro-XYZ         x 3  
-* tBodyGyroJerk-XYZ     x 3  
+* tBodyAcc-XY		x 3  
+* tGravityAcc-XY	x 3  
+* tBodyAccJerk-XY	x 3  
+* tBodyGyro-XY		x 3  
+* tBodyGyroJerk-XY	x 3  
 * tBodyAccMag          
 * tGravityAccMag        
 * tBodyAccJerkMag     
 * tBodyGyroMag           
 * tBodyGyroJerkMag        
-* fBodyAcc-XYZ          x 3  
-* fBodyAccJerk-XYZ      x 3  
-* fBodyGyro-XYZ         x 3  
+* fBodyAcc-XY		x 3  
+* fBodyAccJerk-XY	x 3  
+* fBodyGyro-XYZ 	x 3  
 * fBodyAccMag           
 * fBodyAccJerkMag       
 * fBodyGyroMag         
