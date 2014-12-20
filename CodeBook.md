@@ -80,7 +80,7 @@ names(mdf) <- feature_list
 ```
 Now the merged and processed main data frame has:
 
-10299 Rows and 563 Columns
+10299 Rows	563 Columns
 
 ###Cleaning Data
 
@@ -98,7 +98,7 @@ names(reduced_mdf) <- updated_feature_list
 ```
 The reduced data frame now has:
 
-10299 Rows and 68 Columns
+10299 Rows	68 Columns
 
 To improve the readability of data we appropriately name the columns of the newly created data frame.
 
@@ -241,7 +241,7 @@ and appending it to a new data frame (which is our tidy data) along with the res
 
 The tidy data frame now has:
 
-180 Rows and 68 Columns
+180 Rows	68 Columns
 
 (i.e there are 30 subjects, we are required to average the sensor data for each of the activity (totally 6) for each of the 
   subjects so 30 * 6 = 180, and the number of columns stay the same since they are just column wise average)
@@ -255,17 +255,17 @@ write.table(tidy_df, file="tidy.txt", sep="\t")
 
 ###Explanation of variables and data
 
-The dimensions of train data:
-7352  561
+The dimensions of train data:  
+7352 Rows	561 Columns
 
-The dimensions of test data:
-2947  561
+The dimensions of test data:  
+2947 Row	561 Columns
 
-The dimensions of subject data(test):
-2947    1
+The dimensions of subject data(test):  
+2947 Rows	1 Columns
 
-The dimensions of subject data(train):
-7352    1
+The dimensions of subject data(train):  
+7352 Rows	1 Columns
 
 The the above specifications, we can infer that after merging the test,train and subject data we  
 get a main data frame of dimensions:
