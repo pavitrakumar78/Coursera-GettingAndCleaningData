@@ -1,6 +1,6 @@
 print("Reading data...")
 
-features <- read.table("features.txt")
+features <- read.table("UCI HAR Dataset/features.txt")
 
 subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt")
 
